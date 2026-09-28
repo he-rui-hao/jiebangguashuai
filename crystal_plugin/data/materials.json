@@ -1,0 +1,63 @@
+{
+  "description": "本地晶体结构数据库（题目硬性要求：自动读取本地晶体结构数据库）。晶格常数为室温教科书/Materials Project 标准值，单位 Å。compounds 中 elements 顺序与结构占位一致（A 位在前）。",
+  "lattice_types": {
+    "sc": "简单立方 Simple Cubic",
+    "fcc": "面心立方 A1",
+    "bcc": "体心立方 A2",
+    "hcp": "密排六方 A3（需 c）",
+    "diamond": "金刚石立方 A4（fcc + (1/4,1/4,1/4) 偏移）",
+    "nacl": "岩盐 B1（A 位 fcc，B 位 fcc+(1/2,0,0)）",
+    "cscl": "氯化铯 B2（A(0,0,0) + B(1/2,1/2,1/2)）",
+    "zincblende": "闪锌矿 B3（A 位 fcc，B 位 fcc+(1/4,1/4,1/4)）",
+    "l12": "L1₂ 有序面心立方（A 顶点，B 面心，如 Cu₃Au）"
+  },
+  "materials": {
+    "Al":        {"lattice_type": "fcc", "elements": ["Al"], "a": 4.0495, "note": "铝"},
+    "Cu":        {"lattice_type": "fcc", "elements": ["Cu"], "a": 3.6149, "note": "铜"},
+    "Ni":        {"lattice_type": "fcc", "elements": ["Ni"], "a": 3.5238, "note": "镍"},
+    "gamma-Fe":  {"lattice_type": "fcc", "elements": ["Fe"], "a": 3.5910, "note": "奥氏体（室温外推值）"},
+    "Ag":        {"lattice_type": "fcc", "elements": ["Ag"], "a": 4.0853, "note": "银"},
+    "Au":        {"lattice_type": "fcc", "elements": ["Au"], "a": 4.0782, "note": "金"},
+    "Pb":        {"lattice_type": "fcc", "elements": ["Pb"], "a": 4.9502, "note": "铅"},
+    "Pt":        {"lattice_type": "fcc", "elements": ["Pt"], "a": 3.9231, "note": "铂"},
+    "Pd":        {"lattice_type": "fcc", "elements": ["Pd"], "a": 3.8907, "note": "钯"},
+
+    "alpha-Fe":  {"lattice_type": "bcc", "elements": ["Fe"], "a": 2.8664, "note": "铁素体/马氏体基体"},
+    "W":         {"lattice_type": "bcc", "elements": ["W"],  "a": 3.1652, "note": "钨"},
+    "Mo":        {"lattice_type": "bcc", "elements": ["Mo"], "a": 3.1472, "note": "钼"},
+    "Nb":        {"lattice_type": "bcc", "elements": ["Nb"], "a": 3.3004, "note": "铌"},
+    "Ta":        {"lattice_type": "bcc", "elements": ["Ta"], "a": 3.3058, "note": "钽"},
+    "V":         {"lattice_type": "bcc", "elements": ["V"],  "a": 3.0240, "note": "钒"},
+    "Cr":        {"lattice_type": "bcc", "elements": ["Cr"], "a": 2.8846, "note": "铬"},
+    "beta-Ti":   {"lattice_type": "bcc", "elements": ["Ti"], "a": 3.3065, "note": "β 钛（高温相外推）"},
+
+    "Mg":        {"lattice_type": "hcp", "elements": ["Mg"], "a": 3.2094, "c": 5.2108, "note": "镁"},
+    "Ti":        {"lattice_type": "hcp", "elements": ["Ti"], "a": 2.9511, "c": 4.6843, "note": "α 钛"},
+    "Zr":        {"lattice_type": "hcp", "elements": ["Zr"], "a": 3.2312, "c": 5.1477, "note": "α 锆"},
+    "Zn":        {"lattice_type": "hcp", "elements": ["Zn"], "a": 2.6649, "c": 4.9468, "note": "锌（c/a 远大于理想值）"},
+    "Co":        {"lattice_type": "hcp", "elements": ["Co"], "a": 2.5071, "c": 4.0695, "note": "钴"},
+    "Be":        {"lattice_type": "hcp", "elements": ["Be"], "a": 2.2858, "c": 3.5843, "note": "铍"},
+    "Cd":        {"lattice_type": "hcp", "elements": ["Cd"], "a": 2.9788, "c": 5.6167, "note": "镉"},
+
+    "Po":        {"lattice_type": "sc",  "elements": ["Po"], "a": 3.3450, "note": "α 钋，唯一简单立方单质"},
+
+    "Si":        {"lattice_type": "diamond", "elements": ["Si"], "a": 5.4309, "note": "硅"},
+    "Ge":        {"lattice_type": "diamond", "elements": ["Ge"], "a": 5.6575, "note": "锗"},
+    "C-diamond": {"lattice_type": "diamond", "elements": ["C"],  "a": 3.5670, "note": "金刚石"},
+    "alpha-Sn":  {"lattice_type": "diamond", "elements": ["Sn"], "a": 6.4892, "note": "灰锡（<13°C）"},
+
+    "NaCl":      {"lattice_type": "nacl", "elements": ["Na", "Cl"], "a": 5.6402, "note": "岩盐"},
+    "MgO":       {"lattice_type": "nacl", "elements": ["Mg", "O"],  "a": 4.2112, "note": "氧化镁"},
+    "NiO":       {"lattice_type": "nacl", "elements": ["Ni", "O"],  "a": 4.1771, "note": "氧化镍"},
+
+    "CsCl":      {"lattice_type": "cscl", "elements": ["Cs", "Cl"], "a": 4.1230, "note": "氯化铯"},
+    "NiAl":      {"lattice_type": "cscl", "elements": ["Ni", "Al"], "a": 2.8870, "note": "B2 有序金属间化合物"},
+
+    "ZnS":       {"lattice_type": "zincblende", "elements": ["Zn", "S"],  "a": 5.4093, "note": "闪锌矿"},
+    "GaAs":      {"lattice_type": "zincblende", "elements": ["Ga", "As"], "a": 5.6532, "note": "砷化镓"},
+    "InSb":      {"lattice_type": "zincblende", "elements": ["In", "Sb"], "a": 6.4788, "note": "锑化铟"},
+
+    "Cu3Au":     {"lattice_type": "l12", "elements": ["Au", "Cu"], "a": 3.7490, "note": "L1₂：Au 顶点，Cu 面心"},
+    "Ni3Al":     {"lattice_type": "l12", "elements": ["Al", "Ni"], "a": 3.5720, "note": "γ' 强化相：Al 顶点，Ni 面心"}
+  }
+}
